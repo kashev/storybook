@@ -1,15 +1,9 @@
-lib-cov
-*.seed
-*.log
-*.csv
-*.dat
-*.out
-*.pid
-*.gz
+#gitignore
 
-pids
-logs
-results
+.sass-cache/*
+node_modules/*
+dist/*
+src/css/bourbon/*
+src/css/neat/*
 
-npm-debug.log
-node_modules
+**/Thumbs.db

@@ -1,28 +1,55 @@
+<!--
+/*
+ * storybook
+ * 'A Storybook Webapp, Optimized for iPad'
+ * 
+ * Kashev Dalmia
+ * kashev.dalmia@gmail.com
+ * 
+ * Yet Another Project for ARTD 313 @ UIUC, Sp 2014
+ * proj1a3b - dalmia3
+ * 
+ * index.html
+ */
+-->
+
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Storybook</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="format-detection" content="telephone=no">
-		
-		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/apple-touch-icon-144x144-precomposed.png" />
-		
-		<!--begin stylesheets-->
-		<link rel="stylesheet" href="css/styles.css" />
-		<!--end stylesheets-->
-		
-		<!--begin scripts-->
-		<script src="js/jquery-2.0.3.min.js"></script>
-		<!--plugins go here-->
-		<script src="js/scripts.js"></script>
-		<!--end scripts-->
-	</head>
-	<body>
-		<div id="container">
-			<!--all of your HTML must be inside this div-->
-			<p>Basic iPad web app structure</p>
-		</div>
-	</body>
+<head>
+  <title>storybook</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- iPad Mobile Webapp -->
+  <!-- NOTE: precomposed tags are not needed for iOS7+ -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <link rel="apple-touch-icon" sizes="152x152" href="img/icon-152x152.png" />
+
+  <!-- Android Mobile Webapp -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" sizes="196x196" href="img/icon-196x196.png">
+    
+  <!-- FAVICON -->
+  <link rel="icon" 
+        type="image/ico" 
+        href="img/favicon.ico?v=2">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css" />
+
+</head>
+<body>
+  <div id="container">
+    <!--all of your HTML must be inside this div-->
+    <p>Basic iPad web app structure</p>
+  </div>
+
+  <!-- Scripts -->
+  <!-- jQuery -->
+  <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+  <!-- storybook js -->
+  <script src="js/main.js"></script>
+  
+</body>
 </html>

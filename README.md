@@ -3,7 +3,6 @@ storybook
 
     storybook
     'A Storybook Webapp, Optimized for iPad'
-    
 
     Kashev Dalmia
     kashev.dalmia@gmail.com
