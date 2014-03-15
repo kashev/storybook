@@ -23,10 +23,12 @@ $column : 2;
 /* RESET */
 @import "reset.css";
 
+/* ROBOTO THIN */
+@import url("http://fonts.googleapis.com/css?family=Roboto:700,400,100");
+
 /*
  * MIXINS
  */
-
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
@@ -45,12 +47,51 @@ $column : 2;
 }
 
 /*
+ * NEAT GRID CSS
+ */
+// default grid is 12
+.grid {
+  @include outer-container;
+  .full          { @include span-columns(12); }
+  .ten           { @include span-columns(10); }
+  .three-fourths { @include span-columns(9);  }
+  .half          { @include span-columns(6);  }
+  .five          { @include span-columns(5);  }
+  .third         { @include span-columns(4);  }
+  .two-thirds    { @include span-columns(8);  }
+  .fourth        { @include span-columns(3);  }
+  .sixth         { @include span-columns(2);  }
+}
+
+/*
+ * Storybook CSS
+ */
+// $font-stack : "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+$font-stack : "Roboto";
+
+/*
+ * TAG STYLING
+ */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-stack;
+  font-weight: 100;
+}
+
+/*
  * GIVEN CSS
  */
 body.portrait #container {
   display: none;
 }
+
+/* MAIN CONTAINER */
 #container {
-  width: 100%;
-  min-height: 748px;
+  width      : 100%;
+  min-height : 748px;
+
+  
 }
