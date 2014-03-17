@@ -36,6 +36,6 @@ This project is possible thanks to the work on the following projects:
 - [Sass](http://sass-lang.com/)
 - [Bourbon](http://bourbon.io/)
 - [Neat](http://neat.bourbon.io/)
-- [Simple Icons](http://simpleicons.org/)
+- [Slider](http://cferdinandi.github.io/slider/)
 
-Thanks to Professor Brad Tober, and Isaac DuPree for guidance.
+Thanks to Professor Brad Tober for guidance. Special thanks to Amy Budzicz for helping me approach strangers.
