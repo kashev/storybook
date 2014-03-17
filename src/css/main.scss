@@ -75,6 +75,7 @@ $ipad-width  : 1024px;
 $ipad-height : 768px;
 $ipad-header : 20px;
 
+$text-color    : #FFFFFF;
 $bg-color      : #0A0A0A;
 $warning-color : #FF6600;
 
@@ -112,13 +113,16 @@ img.bg {
   max-height: 100%;
 }
 
+.pagetext {
+  color: $text-color;
+}
+
 /*
  * TITLE PAGE
  */
 
-#page1 {
+.pagetext {
   .title {
-    color: white;
     font-size: 6.00rem;
     position: absolute;
     top: 40%; left: 2.0rem;
