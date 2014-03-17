@@ -71,25 +71,30 @@ $font-stack : "Roboto";
 
 $ipad-width  : 1024px;
 $ipad-height : 768px;
-$ipad-header : 22px;
+$ipad-header : 20px;
 
-$bg-color    : #0A0A0A;
+$bg-color      : #0A0A0A;
+
+$warning-color : #FF6600;
 
 /*
  * TAG STYLING
  */
 html {
   font-size: 62.5%;
+  width: 100%;
 }
 
 body {
   font-family: $font-stack;
   font-weight: 100;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 img {
-  max-width: 100%;
-  max-height: 100%;
+
 }
 
 /*
@@ -102,13 +107,21 @@ img {
 img.bg {
   z-index: -1;
   left: 0; top: 0;
+  max-width: 100%;
+  max-height: 100%;
 }
 
-.title {
-  color: white;
-  font-size: 6.00rem;
-  position: absolute;
-  top: 40%; left: 2.0rem;
+/*
+ * TITLE PAGE
+ */
+
+#page1 {
+  .title {
+    color: white;
+    font-size: 6.00rem;
+    position: absolute;
+    top: 40%; left: 2.0rem;
+  }
 }
 
 /*
@@ -124,8 +137,20 @@ body.portrait #container {
   max-height : $ipad-height - $ipad-header;
   min-width: $ipad-width;
   min-height : $ipad-height - $ipad-header;
-  overflow: hidden;
+  // overflow: hidden;
 
   background-color : $bg-color;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
+/* IPAD BORDER */
+
+#ipad {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top : 0;
+}
