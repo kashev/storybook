@@ -33,5 +33,10 @@ $(document).ready(function(){
     });
     $(window).trigger('orientationchange', true);
   }
+  else
+  {
+    /* NOT AN IPAD */
+    // $("body").append("<img id='ipad' src='img/ipad.png'>");
+  }
 
 });
