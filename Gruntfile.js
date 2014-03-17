@@ -21,7 +21,8 @@ module.exports = function(grunt) {
     'dist/css/reset.css' : 'src/css/reset.css'
   };
   var js_files   = {
-    'dist/js/main.js' : 'src/js/main.js'
+    'dist/js/main.js'        : 'src/js/main.js',
+    'dist/js/slider_init.js' : 'src/js/slider_init.js'
   };
   
   var img_copy =  {
