@@ -25,6 +25,8 @@ $column : 2;
 
 /* ROBOTO THIN */
 @import url("http://fonts.googleapis.com/css?family=Roboto:700,400,100");
+/* COOKIE */
+@import url("http://fonts.googleapis.com/css?family=Cookie:400");
 
 /*
  * MIXINS
@@ -67,14 +69,13 @@ $column : 2;
  * Storybook CSS
  */
 // $font-stack : "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-$font-stack : "Roboto";
+$font-stack : "Cookie", cursive;
 
 $ipad-width  : 1024px;
 $ipad-height : 768px;
 $ipad-header : 20px;
 
 $bg-color      : #0A0A0A;
-
 $warning-color : #FF6600;
 
 /*
@@ -121,6 +122,7 @@ img.bg {
     font-size: 6.00rem;
     position: absolute;
     top: 40%; left: 2.0rem;
+    font-weight: 100;
   }
 }
 
@@ -137,7 +139,7 @@ body.portrait #container {
   max-height : $ipad-height - $ipad-header;
   min-width: $ipad-width;
   min-height : $ipad-height - $ipad-header;
-  // overflow: hidden;
+  overflow: hidden;
 
   background-color : $bg-color;
   position: absolute;
