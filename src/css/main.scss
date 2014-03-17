@@ -69,6 +69,12 @@ $column : 2;
 // $font-stack : "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 $font-stack : "Roboto";
 
+$ipad-width  : 1024px;
+$ipad-height : 768px;
+$ipad-header : 22px;
+
+$bg-color    : #0A0A0A;
+
 /*
  * TAG STYLING
  */
@@ -91,7 +97,8 @@ body.portrait #container {
 /* MAIN CONTAINER */
 #container {
   width      : 100%;
-  min-height : 748px;
+  max-width: $ipad-width;
+  min-height : $ipad-height - $ipad-header;
 
-  
+  background-color : $bg-color;
 }

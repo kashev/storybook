@@ -33,9 +33,5 @@ $(document).ready(function(){
     });
     $(window).trigger('orientationchange', true);
   }
-  
-  // end code change warning
-  
-  // your jQuery code here
 
 });
