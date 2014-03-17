@@ -36,18 +36,39 @@
         href="img/favicon.ico?v=2">
 
   <!-- CSS -->
+  <!-- Slider -->
+  <link rel="stylesheet" href="css/slider-css.css">
+  <!-- storybook css -->
   <link rel="stylesheet" href="css/main.css" />
 
 </head>
+
 <body>
   <div id="container">
-    <!--all of your HTML must be inside this div-->
-    <p>Basic iPad web app structure</p>
+    <div class="slider" data-slider>
+      <!-- EACH SLIDE IS A PAGE -->
+      <div class="slides">
+        <div class="slide">
+          <img class="bg" src="img/joes.jpg">
+          <h1 class="title">Good Night Moon</h1>
+        </div>
+        <div class="slide">
+          <img class="bg" src="img/joes.jpg">
+        </div>
+        <div class="slide">
+          <img class="bg" src="img/joes.jpg">
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- Scripts -->
   <!-- jQuery -->
   <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+  <!-- Slider -->
+  <script src="js/lib/slider.js"></script>
+  <script src="js/lib/slider.js"></script>
+  <script src="js/slider_init.js"></script>
   <!-- storybook js -->
   <script src="js/main.js"></script>
   

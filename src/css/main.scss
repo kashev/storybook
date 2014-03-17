@@ -87,6 +87,30 @@ body {
   font-weight: 100;
 }
 
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/*
+ * STORYBOOK CSS
+ */
+.slide {
+  position: relative;
+}
+
+img.bg {
+  z-index: -1;
+  left: 0; top: 0;
+}
+
+.title {
+  color: white;
+  font-size: 6.00rem;
+  position: absolute;
+  top: 40%; left: 2.0rem;
+}
+
 /*
  * GIVEN CSS
  */
@@ -96,9 +120,12 @@ body.portrait #container {
 
 /* MAIN CONTAINER */
 #container {
-  width      : 100%;
   max-width: $ipad-width;
+  max-height : $ipad-height - $ipad-header;
+  min-width: $ipad-width;
   min-height : $ipad-height - $ipad-header;
+  overflow: hidden;
 
   background-color : $bg-color;
 }
+

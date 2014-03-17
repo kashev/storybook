@@ -17,12 +17,15 @@ module.exports = function(grunt) {
     'dist/index.html' : 'src/index.html'
   };
   var css_files  = {
-    'dist/css/main.css'  : 'src/css/main.scss',
-    'dist/css/reset.css' : 'src/css/reset.css'
+    'dist/css/main.css'        : 'src/css/main.scss',
+    'dist/css/reset.css'      : 'src/css/reset.css',
+    'dist/css/slider-css.css' : 'src/css/slider-css.css'
   };
   var js_files   = {
-    'dist/js/main.js'        : 'src/js/main.js',
-    'dist/js/slider_init.js' : 'src/js/slider_init.js'
+    'dist/js/main.js'          : 'src/js/main.js',
+    'dist/js/slider_init.js'   : 'src/js/slider_init.js',
+    'dist/js/lib/slider.js'    : 'src/js/lib/slider.js',
+    'dist/js/lib/fluidvids.js' : 'src/js/lib/fluidvids.js'
   };
   
   var img_copy =  {
