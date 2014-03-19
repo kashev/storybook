@@ -7,3 +7,6 @@ src/css/bourbon/*
 src/css/neat/*
 
 **/Thumbs.db
+
+# packages - unziped versions aren't kept, zipped versions are.
+packages/*/**
