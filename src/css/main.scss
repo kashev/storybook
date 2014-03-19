@@ -102,7 +102,6 @@ body.portrait #container {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-
 }
 
 /*
@@ -120,6 +119,11 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  /*
+   * everything is visible forever
+   */
+  color: $text-color-white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 img {
@@ -146,7 +150,6 @@ img {
     width: 100%;
     position: absolute;
       
-    color: $text-color-white;
     font-family: $josefin-stack;
     font-size: 3.5rem;
     text-align: center;    
@@ -163,7 +166,7 @@ img {
     left: 3.0rem;
     top: 20%;
     text-align: left;
-    .title {
+    h1 {
       font-family: $title-stack;
       font-size: 6.00rem;
       font-weight: 100;
