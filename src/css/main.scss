@@ -71,7 +71,9 @@ $josefin-stack  : "Josefin Slab", serif;
 
 /* Colors */
 $text-color-white : #FFFFFF;
+$text-color-grey  : #AAAAAA;
 $text-color-black : #010101;
+$text-color-pom   : #c0392b;
 $bg-color         : #0A0A0A;
 $warning-color    : #FF6600;
 
@@ -119,8 +121,10 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+
   /*
    * everything is visible forever
+   *  http://stackoverflow.com/a/8712442/1473320
    */
   color: $text-color-white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
@@ -128,6 +132,22 @@ body {
 
 img {
 
+}
+
+/*
+ * LINKS
+ */
+a {
+  text-decoration: none;
+}
+a:link {
+  color: $text-color-white;
+}
+a:visited {
+  color: $text-color-grey;
+}
+a:hover {
+  color: $text-color-pom;
 }
 
 /*
@@ -156,7 +176,7 @@ img {
   }
   .pagetext.bottom {
     left: 0;
-    bottom: 2.0rem; 
+    bottom: 10%; 
   }
 
   /*
@@ -169,8 +189,64 @@ img {
     h1 {
       font-family: $title-stack;
       font-size: 6.00rem;
+      line-height: 10.00rem;
       font-weight: 100;
-      color:$text-color-white;
+    }
+    h2 {
+      font-family: $josefin-stack;
+      font-weight: bold;
+      font-size: 3.0rem;
+    }
+  }
+
+  /*
+   * FIN PAGE SPECIFIC
+   */
+  .pagetext.fin{
+    top: 40%;
+    h1 {
+      font-family: $title-stack;
+      font-size: 6.00rem;
+      line-height: 10.00rem;
+      font-weight: 100;
+    }
+  }
+
+  /*
+   * THANKS PAGE SPECIFIC
+   */
+  .pagetext.thanks{
+    top: 20%;
+    h1 {
+      font-family: $title-stack;
+      font-size: 6.00rem;
+      line-height: 10.00rem;
+      font-weight: 100;
+    }
+    p {
+      font-family: $josefin-stack;
+      text-align: left;
+      font-size: 2.5rem;
+
+      padding: 15px 10%;
+    }
+  }
+
+  /*
+   * ABOUT PAGE SPECIFIC
+   */
+  .pagetext.about{
+    top: 20%;
+    h1 {
+      font-family: $title-stack;
+      font-size: 6.00rem;
+      line-height: 10.00rem;
+      font-weight: 100;
+    }
+    h2 {
+      font-family: $josefin-stack;
+      font-weight: bold;
+      font-size: 3.0rem;
     }
   }
 
@@ -186,7 +262,6 @@ img {
     
     font-family: $josefin-stack;
     font-size: 2.0rem;
-    color: $text-color-white;
   }
 
 } /* END SLIDE CSS */
