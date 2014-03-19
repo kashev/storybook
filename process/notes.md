@@ -17,3 +17,7 @@ Images shot at 1280 x 720 need to be cropped:
   x      1024
 ----- = ------ => x ~ 986px
  720     768
+
+ # 3/19 Notes
+[ ] Disable srolling
+[X] fix iOS7 status bar bug
