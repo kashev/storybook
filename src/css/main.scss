@@ -99,7 +99,7 @@ body.portrait #container {
   overflow: hidden;
 
   background-color : $bg-color;
-  position: absolute;
+  position: relative;
   margin-left: auto;
   margin-right: auto;
 
@@ -117,6 +117,9 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 img {
@@ -135,26 +138,34 @@ img {
     max-width: 100%;
     max-height: 100%;
   }
-  
+
+  /*
+   * PAGE TEXT
+   */
   .pagetext {
     width: 100%;
     position: absolute;
-    top: 0; left: 0;
+      
     color: $text-color-white;
     font-family: $josefin-stack;
-    div {
-      font-size: 3.5rem;
-      text-align: center;
-    }
-    
-    /*
-     * TITLE PAGE
-     */
+    font-size: 3.5rem;
+    text-align: center;    
+  }
+  .pagetext.bottom {
+    left: 0;
+    bottom: 2.0rem; 
+  }
+
+  /*
+   * TITLE PAGE SPECIFIC
+   */
+  .pagetext.titlepage{
+    left: 3.0rem;
+    top: 20%;
+    text-align: left;
     .title {
       font-family: $title-stack;
       font-size: 6.00rem;
-      position: absolute;
-      top: 40%; left: 2.0rem;
       font-weight: 100;
       color:$text-color-white;
     }
@@ -174,7 +185,8 @@ img {
     font-size: 2.0rem;
     color: $text-color-white;
   }
-}
+
+} /* END SLIDE CSS */
 
 
 
