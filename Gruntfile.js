@@ -17,7 +17,7 @@ module.exports = function(grunt) {
     'dist/index.html' : 'src/index.html'
   };
   var css_files  = {
-    'dist/css/main.css'        : 'src/css/main.scss',
+    'dist/css/main.css'       : 'src/css/main.scss',
     'dist/css/reset.css'      : 'src/css/reset.css',
     'dist/css/slider-css.css' : 'src/css/slider-css.css'
   };
