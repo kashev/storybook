@@ -55,7 +55,7 @@ window.sliderInit = (function (window, document, undefined) {
       // Display Slider navigation
       var createNavButtons = function () {
         if ( slideNav !== null ) {
-          slideNav.innerHTML = '<a data-slider-nav-prev href="#"><i class="fa fa-arrow-left"></i></a>   <i class="fa fa-th"></i>   <a data-slider-nav-next href="#"><i class="fa fa-arrow-right"></i></a>';
+          slideNav.innerHTML = '<a data-slider-nav-prev href="#"><i class="fa fa-arrow-left"></i></a>   <i class="fa fa-th nav"></i>   <a data-slider-nav-next href="#"><i class="fa fa-arrow-right"></i></a>';
         }
       };
 
