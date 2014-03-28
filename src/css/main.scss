@@ -153,6 +153,8 @@ a:hover {
 /*
  * STORYBOOK CSS
  */
+
+/* SLIDE CSS */
 .slide {
   position: relative;
 
@@ -266,6 +268,23 @@ a:hover {
 
 } /* END SLIDE CSS */
 
+/*
+ * NAV CSS
+ */
+
+.slides-nav {
+  font-family: $josefin-stack;
+  font-size: 3.5rem;
+  text-align: center;
+  font-weight: 100;
+
+  position: absolute;
+  width: 100%;
+  left: 0; right: 0;
+  bottom: 2.0rem;
+  .nav {
+  }
+}
 
 
 /* IPAD BORDER */

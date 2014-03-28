@@ -37,5 +37,6 @@ This project is possible thanks to the work on the following projects:
 - [Bourbon](http://bourbon.io/)
 - [Neat](http://neat.bourbon.io/)
 - [Slider](http://cferdinandi.github.io/slider/)
+- [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
 
 Thanks to Professor Brad Tober for guidance. Special thanks to Amy Budzicz for helping me approach strangers.

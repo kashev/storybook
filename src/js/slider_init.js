@@ -55,7 +55,7 @@ window.sliderInit = (function (window, document, undefined) {
       // Display Slider navigation
       var createNavButtons = function () {
         if ( slideNav !== null ) {
-          slideNav.innerHTML = '<a data-slider-nav-prev href="#">Previous</a> | <a data-slider-nav-next href="#">Next</a>';
+          slideNav.innerHTML = '<a data-slider-nav-prev href="#"><i class="fa fa-arrow-left"></i></a>   <i class="fa fa-th"></i>   <a data-slider-nav-next href="#"><i class="fa fa-arrow-right"></i></a>';
         }
       };
 
@@ -92,7 +92,7 @@ window.sliderInit = (function (window, document, undefined) {
         if ( event.keyCode == 37 ) {
           mySwipe[index].prev();
         }
-        if ( event.keyCode == 39) {
+        if ( event.keyCode == 39 ) {
           mySwipe[index].next();
         }
       };
@@ -102,11 +102,9 @@ window.sliderInit = (function (window, document, undefined) {
 
       // Activate Slider
       mySwipe[index] = Swipe(slider, {
-        // startSlide: 2,
         // speed: 400,
-        // auto: 3000,
         continuous: false,
-        // disableScroll: false,
+        disableScroll: true,
         // stopPropagation: false,
         callback: function(index, elem) {
           createSlideCount(); // Update with new position on slide change
