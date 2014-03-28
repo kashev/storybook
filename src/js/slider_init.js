@@ -12,7 +12,8 @@
  */
 
 /*
- * COPIED FROM http://cferdinandi.github.io/slider/
+ * STARTED FROM http://cferdinandi.github.io/slider/
+ * Modified to include hash navigation.
  */
 
 window.sliderInit = (function (window, document, undefined) {
@@ -55,7 +56,15 @@ window.sliderInit = (function (window, document, undefined) {
       // Display Slider navigation
       var createNavButtons = function () {
         if ( slideNav !== null ) {
-          slideNav.innerHTML = '<a data-slider-nav-prev href="#"><i class="fa fa-arrow-left"></i></a>   <i class="fa fa-th nav"></i>   <a data-slider-nav-next href="#"><i class="fa fa-arrow-right"></i></a>';
+          slideNav.innerHTML = '<a data-slider-nav-prev href="#">'    +
+                                  '<i class="fa fa-arrow-left"></i>'  +
+                                '</a>     '                           +
+                                '<a data-slider-nav-hash href="#"'    +
+                                  '<i class="fa fa-th nav"></i>'      +
+                                '</a>     '                           +
+                                '<a data-slider-nav-next href="#">'   +
+                                  '<i class="fa fa-arrow-right"></i>' +
+                                '</a>';
         }
       };
 
@@ -97,6 +106,13 @@ window.sliderInit = (function (window, document, undefined) {
         }
       };
 
+      // Handle hash nav
+      var handleHashBtn = function (event) {
+        event.preventDefault();
+        stopVideo();
+        mySwipe[index].slide(20, 400);
+      }
+
 
       // EVENTS, LISTENERS, AND INITS
 
@@ -117,6 +133,7 @@ window.sliderInit = (function (window, document, undefined) {
       createNavButtons();
       var btnNext = slider.querySelector('[data-slider-nav-next]'); // Next slide button
       var btnPrev = slider.querySelector('[data-slider-nav-prev]'); // Previous slide button
+      var btnHash = slider.querySelector('[data-slider-nav-hash]'); // Hash Navigation slide
 
       // Toggle Previous & Next Buttons
       if ( btnNext ) {
@@ -124,6 +141,9 @@ window.sliderInit = (function (window, document, undefined) {
       }
       if ( btnPrev ) {
         btnPrev.addEventListener('click', handlePrevBtn, false);
+      }
+      if ( btnHash ) {
+        btnHash.addEventListener('click', handleHashBtn, false);
       }
 
       // Toggle Left & Right Keypress

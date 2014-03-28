@@ -274,6 +274,8 @@ a:hover {
 
 .slides-nav {
   font-family: $josefin-stack;
+  color: $text-color-white;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
   font-size: 3.5rem;
   text-align: center;
   font-weight: 100;
@@ -282,10 +284,16 @@ a:hover {
   width: 100%;
   left: 0; right: 0;
   bottom: 2.0rem;
-  .nav {
+  a:link {
+    color: $text-color-white;
   }
-  .nav:hover {
+  a:visited {
+    color: $text-color-white;
+  }
+  a:hover {
     color: $text-color-pom;
+  }
+  .nav {
   }
 }
 
