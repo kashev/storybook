@@ -111,7 +111,6 @@ window.sliderInit = (function (window, document, undefined) {
       // handle show and hide of next/prev
       var handleArrowVisibility = function() {
         var i = mySwipe[index].getPos() - 1;
-        console.log(i);
         if (i === 0)
         {
           $('#slide-nav-next').visible();
