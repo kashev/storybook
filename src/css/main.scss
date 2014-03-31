@@ -141,13 +141,13 @@ a {
   text-decoration: none;
 }
 a:link {
-  color: $text-color-white;
+  color: $text-color-pom;
 }
 a:visited {
   color: $text-color-grey;
 }
 a:hover {
-  color: $text-color-pom;
+  color: lighten($text-color-pom, 15%);
 }
 
 /*
@@ -244,11 +244,18 @@ a:hover {
       font-size: 6.00rem;
       line-height: 10.00rem;
       font-weight: 100;
+      padding: 2.00rem;
     }
     h2 {
       font-family: $josefin-stack;
       font-weight: bold;
       font-size: 3.0rem;
+      padding: 2.00rem;
+    }
+    p {
+      font-size: 2.50rem;
+      text-align: left;
+      padding: 2.50rem;
     }
   }
 
@@ -295,6 +302,19 @@ a:hover {
   }
   .nav {
   }
+}
+
+.slides-nav-menu {
+  position: absolute;
+  top: 0; left: 0;
+  text-align: center;
+  z-index: 5;
+  font-size: 3.00rem;
+  font-family: $josefin-stack;
+  width : 30.00rem;
+  background-color: $bg-color;
+  padding: 1.0rem;
+  @include border-radius(5%);
 }
 
 
