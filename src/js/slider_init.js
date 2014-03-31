@@ -15,6 +15,13 @@
  * STARTED FROM http://cferdinandi.github.io/slider/
  * Modified to include hash navigation.
  */
+var GLOBAL_SLIDES;
+
+var toggleToC = function() {
+  $('#slides-nav-menu').toggle({
+    duration : 400
+  });
+}
 
 window.sliderInit = (function (window, document, undefined) {
 
@@ -110,7 +117,7 @@ window.sliderInit = (function (window, document, undefined) {
       var handleHashBtn = function (event) {
         event.preventDefault();
         stopVideo();
-        mySwipe[index].slide(20, 400);
+        toggleToC();
       }
 
 
@@ -148,9 +155,31 @@ window.sliderInit = (function (window, document, undefined) {
 
       // Toggle Left & Right Keypress
       window.addEventListener('keydown', handleKeypress, false);
-
+      GLOBAL_SLIDES = mySwipe[index]; // only works with 1 set of slides on a page.
     });
 
   }
 
 })(window, document);
+
+/* Set ToC Handlers */
+$(document).ready(function(){
+  $("#slides-nav-menu div").click(function(){
+    var deststr = $(this).text();
+    var destnum;
+    if (deststr === "thanks")
+    {
+      destnum = 27;
+    }
+    else if (deststr === "about")
+    {
+      destnum = 28;
+    }
+    else
+    {
+      destnum = parseInt(deststr);
+    }
+    GLOBAL_SLIDES.slide(destnum, 400);
+    toggleToC(); // hide ToC
+  });
+});

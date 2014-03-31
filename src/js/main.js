@@ -39,8 +39,4 @@ $(document).ready(function(){
     // $("body").append("<img id='ipad' src='img/ipad.png'>");
   }
 
-  $('.slides-nav .nav').click(function() {
-    console.log('NAV');
-  });
-
 });
