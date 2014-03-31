@@ -305,16 +305,19 @@ a:hover {
 }
 
 .slides-nav-menu {
+  display: none;
+
   position: absolute;
-  top: 0; left: 0;
+  top: $ipad-height - $ipad-header - 350px; left: $ipad-width / 2 - 200px; // only places well w/o zoom
+  border: solid white 2px;
   text-align: center;
   z-index: 5;
   font-size: 3.00rem;
   font-family: $josefin-stack;
-  width : 30.00rem;
+  width : 40.00rem;
   background-color: $bg-color;
   padding: 1.0rem;
-  @include border-radius(5%);
+  @include border-radius(15%);
   div:hover {
     color: $text-color-pom;
   }
