@@ -15,13 +15,27 @@
  * STARTED FROM http://cferdinandi.github.io/slider/
  * Modified to include hash navigation.
  */
+/*
+ * Add actual invisibility to jQuery
+ *   http://stackoverflow.com/a/9614662/1473320
+ */
+jQuery.fn.visible = function() {
+    return this.css('visibility', 'visible');
+};
+
+jQuery.fn.invisible = function() {
+    return this.css('visibility', 'hidden');
+};
+
+jQuery.fn.visibilityToggle = function() {
+    return this.css('visibility', function(i, visibility) {
+        return (visibility == 'visible') ? 'hidden' : 'visible';
+    });
+};
+
 var GLOBAL_SLIDES;
 
-var toggleToC = function() {
-  $('#slides-nav-menu').toggle({
-    duration : 400
-  });
-}
+$(document).ready(function(){
 
 window.sliderInit = (function (window, document, undefined) {
 
@@ -63,13 +77,13 @@ window.sliderInit = (function (window, document, undefined) {
       // Display Slider navigation
       var createNavButtons = function () {
         if ( slideNav !== null ) {
-          slideNav.innerHTML = '<a data-slider-nav-prev href="#">'    +
+          slideNav.innerHTML = '<a data-slider-nav-prev id="slide-nav-prev" href="#" style="visibility:hidden">'    +
                                   '<i class="fa fa-arrow-left"></i>'  +
                                 '</a>     '                           +
                                 '<a data-slider-nav-hash href="#"'    +
                                   '<i class="fa fa-th nav"></i>'      +
                                 '</a>     '                           +
-                                '<a data-slider-nav-next href="#">'   +
+                                '<a data-slider-nav-next id="slide-nav-next" href="#">'   +
                                   '<i class="fa fa-arrow-right"></i>' +
                                 '</a>';
         }
@@ -89,11 +103,38 @@ window.sliderInit = (function (window, document, undefined) {
         }
       };
 
+      var toggleToC = function() {
+        $('#slides-nav-menu').toggle({
+          duration : 400
+        });
+      }
+      // handle show and hide of next/prev
+      var handleArrowVisibility = function() {
+        var i = mySwipe[index].getPos() - 1;
+        console.log(i);
+        if (i === 0)
+        {
+          $('#slide-nav-next').visible();
+          $('#slide-nav-prev').invisible();
+        }
+        else if (i === 28) // specific to this slideshow
+        {
+          $('#slide-nav-next').invisible();
+          $('#slide-nav-prev').visible();
+        }
+        else
+        {
+          $('#slide-nav-next').visible();
+          $('#slide-nav-prev').visible();
+        }
+      }
+
       // Handle next button
       var handleNextBtn = function (event) {
         event.preventDefault();
         stopVideo();
         mySwipe[index].next();
+        handleArrowVisibility();
       };
 
       // Handle previous button
@@ -101,6 +142,7 @@ window.sliderInit = (function (window, document, undefined) {
         event.preventDefault();
         stopVideo();
         mySwipe[index].prev();
+        handleArrowVisibility();
       };
 
       // Handle keypress
@@ -111,6 +153,7 @@ window.sliderInit = (function (window, document, undefined) {
         if ( event.keyCode == 39 ) {
           mySwipe[index].next();
         }
+        handleArrowVisibility();
       };
 
       // Handle hash nav
@@ -155,31 +198,37 @@ window.sliderInit = (function (window, document, undefined) {
 
       // Toggle Left & Right Keypress
       window.addEventListener('keydown', handleKeypress, false);
-      GLOBAL_SLIDES = mySwipe[index]; // only works with 1 set of slides on a page.
+
+
+      /* Set ToC Handlers */
+      $("#slides-nav-menu div").click(function(){
+        var deststr = $(this).text();
+        var destnum;
+        if (deststr === "thanks")
+        {
+          destnum = 27;
+        }
+        else if (deststr === "about")
+        {
+          destnum = 28;
+        }
+        else if (deststr === "title")
+        {
+          destnum = 0;
+        }
+        else
+        {
+          destnum = parseInt(deststr);
+        }
+        mySwipe[index].slide(destnum, 400);
+        handleArrowVisibility();
+        toggleToC(); // hide ToC
+      });
     });
 
   }
 
 })(window, document);
 
-/* Set ToC Handlers */
-$(document).ready(function(){
-  $("#slides-nav-menu div").click(function(){
-    var deststr = $(this).text();
-    var destnum;
-    if (deststr === "thanks")
-    {
-      destnum = 27;
-    }
-    else if (deststr === "about")
-    {
-      destnum = 28;
-    }
-    else
-    {
-      destnum = parseInt(deststr);
-    }
-    GLOBAL_SLIDES.slide(destnum, 400);
-    toggleToC(); // hide ToC
-  });
-});
+
+}); /* END DOCUMENT READY */
