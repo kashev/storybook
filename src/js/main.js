@@ -11,6 +11,8 @@
  * main.js
  */
 
+
+/* global PxLoader:false */
 $(document).ready(function(){
 
   /* NAVIGATE WITHIN MOBILE WEBAPP */
@@ -38,5 +40,50 @@ $(document).ready(function(){
     /* NOT AN IPAD */
     // $("body").append("<img id='ipad' src='img/ipad.png'>");
   }
+
+  /* PXLOADER */
+  var loader = new PxLoader();
+  var imgs = [
+    loader.addImage("img/joes.jpg"),
+    loader.addImage("img/green-room.png"),
+    loader.addImage("img/phone.png"),
+    loader.addImage("img/bears-chairs.png"),
+    loader.addImage("img/kittens.png"),
+    loader.addImage("img/mittens.jpg"),
+    loader.addImage("img/house.jpg"),
+    loader.addImage("img/young-mouse.jpg"),
+    loader.addImage("img/mush.jpg"),
+    loader.addImage("img/old-lady.jpg"),
+    loader.addImage("img/gn-room.png"),
+    loader.addImage("img/gn-moon.jpg"),
+    loader.addImage("img/gn-cow.JPG"),
+    loader.addImage("img/gn-light-redballoon.jpg"),
+    loader.addImage("img/gn-bears.png"),
+    loader.addImage("img/gn-kittens.jpg"),
+    loader.addImage("img/gn-clocks.jpg"),
+    loader.addImage("img/gn-house.jpg"),
+    loader.addImage("img/gn-mouse.jpg"),
+    loader.addImage("img/gn-brush.jpg"),
+    loader.addImage("img/gn-nobody.jpg"),
+    loader.addImage("img/gn-mush.jpg"),
+    loader.addImage("img/gn-oldlady.jpg"),
+    loader.addImage("img/gn-starsair.jpg"),
+    loader.addImage("img/gn-noises.jpg")
+  ];
+
+  loader.addProgressListener(function(e){
+    console.log(e.completedCount + '/' + e.totalCount);
+  });
+
+  loader.addCompletionListener(function() {
+    console.log("LOADER DONE");
+    var l = imgs.length;
+    for(var i = 0; i < l; i++) 
+    {
+      console.log(Object.keys(imgs[i]));
+    } 
+  });
+
+  loader.start();
 
 });

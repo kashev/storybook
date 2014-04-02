@@ -24,7 +24,7 @@ $column : 2;
 @import "reset.css";
 
 /* JOSEFIN SLAB, THIN */
-@import url("http://fonts.googleapis.com/css?family=Josefin+Slab:700,400,100");
+@import url("http://fonts.googleapis.com/css?family=Josefin+Slab:600,400,100");
 /* COOKIE */
 @import url("http://fonts.googleapis.com/css?family=Cookie:400");
 
@@ -173,6 +173,7 @@ a:hover {
     position: absolute;
       
     font-family: $josefin-stack;
+    font-weight: 600;
     font-size: 3.5rem;
     text-align: center;    
   }
@@ -249,7 +250,7 @@ a:hover {
     h2 {
       font-family: $josefin-stack;
       font-weight: bold;
-      font-size: 3.0rem;
+      font-size: 3.5rem;
       padding: 3.00rem 2.00rem 0.50rem 2.00rem;
     }
     p {

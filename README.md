@@ -20,7 +20,7 @@ The resultant application is currently live at:
 - http://kashevdalmia.com/storybook
 
 ## The Book
-The book is.
+The book is an interpretation of the children's story ['Goodnight Moon'](http://en.wikipedia.org/wiki/Goodnight_Moon) by Margaret Wise Brown. 
 
 ## Instructions
 Building this code from source requires `node`, `npm`, and `ruby`.
@@ -38,5 +38,6 @@ This project is possible thanks to the work on the following projects:
 - [Neat](http://neat.bourbon.io/)
 - [Slider](http://cferdinandi.github.io/slider/)
 - [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
+- [PxLoader](https://github.com/thinkpixellab/PxLoader)
 
 Thanks to Professor Brad Tober for guidance. Special thanks to Amy Budzicz for helping me approach strangers.

@@ -1,0 +1,59 @@
+# EVERY PAGE
+
+0  img/joes.jpg
+1  img/green-room.png
+2  img/phone.png
+3  img/joes.jpg
+4  img/bears-chairs.png
+5  img/kittens.png
+6  img/mittens.jpg
+7  img/house.jpg
+8  img/young-mouse.jpg
+9  img/mush.jpg
+10 img/old-lady.jpg
+11 img/gn-room.png
+12 img/gn-moon.jpg
+13 img/gn-cow.JPG
+14 img/gn-light-redballoon.jpg
+15 img/gn-bears.png
+16 img/gn-kittens.jpg
+17 img/gn-clocks.jpg
+18 img/gn-house.jpg
+19 img/gn-mouse.jpg
+21 img/gn-brush.jpg
+22 img/gn-nobody.jpg
+23 img/gn-mush.jpg
+24 img/gn-oldlady.jpg
+25 img/gn-starsair.jpg
+26 img/gn-noises.jpg
+26 img/joes.jpg
+27 img/gn-room.png
+28 img/gn-room.png
+
+# UNIQUE IMAGES
+
+joes.jpg
+green-room.png
+phone.png
+bears-chairs.png
+kittens.png
+mittens.jpg
+house.jpg
+young-mouse.jpg
+mush.jpg
+old-lady.jpg
+gn-room.png
+gn-moon.jpg
+gn-cow.JPG
+gn-light-redballoon.jpg
+gn-bears.png
+gn-kittens.jpg
+gn-clocks.jpg
+gn-house.jpg
+gn-mouse.jpg
+gn-brush.jpg
+gn-nobody.jpg
+gn-mush.jpg
+gn-oldlady.jpg
+gn-starsair.jpg
+gn-noises.jpg

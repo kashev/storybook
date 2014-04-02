@@ -22,10 +22,12 @@ module.exports = function(grunt) {
     'dist/css/slider-css.css' : 'src/css/slider-css.css'
   };
   var js_files   = {
-    'dist/js/main.js'          : 'src/js/main.js',
-    'dist/js/slider_init.js'   : 'src/js/slider_init.js',
-    'dist/js/lib/slider.js'    : 'src/js/lib/slider.js',
-    'dist/js/lib/fluidvids.js' : 'src/js/lib/fluidvids.js'
+    'dist/js/main.js'              : 'src/js/main.js',
+    'dist/js/slider_init.js'       : 'src/js/slider_init.js',
+    'dist/js/lib/slider.js'        : 'src/js/lib/slider.js',
+    'dist/js/lib/fluidvids.js'     : 'src/js/lib/fluidvids.js',
+    'dist/js/lib/PxLoader.js'      : 'src/js/lib/PxLoader.js',
+    'dist/js/lib/PxLoaderImage.js' : 'src/js/lib/PxLoaderImage.js'
   };
   
   var img_copy =  {
