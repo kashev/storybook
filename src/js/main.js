@@ -12,9 +12,9 @@
  */
 
 
-/* global PxLoader:false */
+/* global  PxLoader:false */
+/* global NProgress:false */
 $(document).ready(function(){
-
   /* NAVIGATE WITHIN MOBILE WEBAPP */
   /* jshint ignore:start */
   (function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")
@@ -40,6 +40,9 @@ $(document).ready(function(){
     /* NOT AN IPAD */
     // $("body").append("<img id='ipad' src='img/ipad.png'>");
   }
+
+  /* START PROGRESS BAR */
+  NProgress.start();
 
   /* PXLOADER */
   var loader = new PxLoader();
@@ -72,16 +75,12 @@ $(document).ready(function(){
   ];
 
   loader.addProgressListener(function(e){
-    console.log(e.completedCount + '/' + e.totalCount);
+    // console.log(e.completedCount / e.totalCount);
+    NProgress.set(e.completedCount / e.totalCount);
   });
 
   loader.addCompletionListener(function() {
-    console.log("LOADER DONE");
-    var l = imgs.length;
-    for(var i = 0; i < l; i++) 
-    {
-      console.log(Object.keys(imgs[i]));
-    } 
+    NProgress.done();
   });
 
   loader.start();

@@ -38,6 +38,7 @@ This project is possible thanks to the work on the following projects:
 - [Neat](http://neat.bourbon.io/)
 - [Slider](http://cferdinandi.github.io/slider/)
 - [Font Awesome](http://fortawesome.github.io/Font-Awesome/)
-- [PxLoader](https://github.com/thinkpixellab/PxLoader)
+- [PxLoader](http://thinkpixellab.com/pxloader/)
+- [NLoader](http://ricostacruz.com/nprogress/)
 
 Thanks to Professor Brad Tober for guidance. Special thanks to Amy Budzicz for helping me approach strangers.

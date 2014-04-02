@@ -19,7 +19,8 @@ module.exports = function(grunt) {
   var css_files  = {
     'dist/css/main.css'       : 'src/css/main.scss',
     'dist/css/reset.css'      : 'src/css/reset.css',
-    'dist/css/slider-css.css' : 'src/css/slider-css.css'
+    'dist/css/slider-css.css' : 'src/css/slider-css.css',
+    'dist/css/nprogress.css'  : 'src/css/nprogress.css'
   };
   var js_files   = {
     'dist/js/main.js'              : 'src/js/main.js',
@@ -27,7 +28,8 @@ module.exports = function(grunt) {
     'dist/js/lib/slider.js'        : 'src/js/lib/slider.js',
     'dist/js/lib/fluidvids.js'     : 'src/js/lib/fluidvids.js',
     'dist/js/lib/PxLoader.js'      : 'src/js/lib/PxLoader.js',
-    'dist/js/lib/PxLoaderImage.js' : 'src/js/lib/PxLoaderImage.js'
+    'dist/js/lib/PxLoaderImage.js' : 'src/js/lib/PxLoaderImage.js',
+    'dist/js/lib/nprogress.js'     : 'src/js/lib/nprogress.js'
   };
   
   var img_copy =  {
