@@ -43,7 +43,7 @@ $nprogress-color : #c0392b;
   right: 0px;
   width: 100px;
   height: 100%;
-  box-shadow: 0 0 10px #29d, 0 0 5px $nprogress-color;
+  box-shadow: 0 0 10px $nprogress-color, 0 0 5px $nprogress-color;
   opacity: 1.0;
 
   -webkit-transform: rotate(3deg) translate(0px, -4px);

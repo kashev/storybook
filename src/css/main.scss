@@ -112,6 +112,7 @@ body.portrait #container {
 html {
   font-size: 62.5%;
   width: 100%;
+  background-color: $bg-color;
   background-image: url('../img/texture.png');
   background-repeat: repeat;
 }
@@ -166,6 +167,7 @@ a:hover {
   left: 0;
   right: 0;
   z-index: 5;
+  background-color: $bg-color;
   background-image: url('../img/texture.png');
   background-repeat: repeat;
   position: absolute;
@@ -289,7 +291,7 @@ a:hover {
     text-align: right;
     
     font-family: $josefin-stack;
-    font-size: 2.0rem;
+    font-size: 2.5rem;
   }
 
 } /* END SLIDE CSS */

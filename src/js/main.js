@@ -49,6 +49,7 @@ $(document).ready(function(){
   /* PXLOADER */
   var loader = new PxLoader();
   var imgs = [
+    loader.addImage("img/texture.png"),
     loader.addImage("img/joes.jpg"),
     loader.addImage("img/green-room.png"),
     loader.addImage("img/phone.png"),

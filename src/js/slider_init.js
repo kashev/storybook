@@ -173,6 +173,7 @@ window.sliderInit = (function (window, document, undefined) {
         // stopPropagation: false,
         callback: function(index, elem) {
           createSlideCount(); // Update with new position on slide change
+          handleArrowVisibility();
         },
         // transitionEnd: function(index, elem) {}
       });
