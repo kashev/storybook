@@ -181,7 +181,8 @@
     if (!Settings.showSpinner)
       $el.find('[role="spinner"]').remove();
 
-    $el.appendTo(document.body);
+    // $el.appendTo(document.body);
+    $el.appendTo(document.getElementById('container'));
 
     return $el;
   };

@@ -74,7 +74,7 @@ $text-color-white : #FFFFFF;
 $text-color-grey  : #AAAAAA;
 $text-color-black : #010101;
 $text-color-pom   : #c0392b;
-$bg-color         : #0A0A0A;
+$bg-color         : #2A2A2A;
 $warning-color    : #FF6600;
 
 
@@ -112,6 +112,8 @@ body.portrait #container {
 html {
   font-size: 62.5%;
   width: 100%;
+  background-image: url('../img/texture.png');
+  background-repeat: repeat;
 }
 
 body {
@@ -153,6 +155,22 @@ a:hover {
 /*
  * STORYBOOK CSS
  */
+
+/* LOADING SCREEN */
+#loading {
+  text-align: center;
+  font-family: $cookie-stack;
+  font-size: 10.0rem;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  background-image: url('../img/texture.png');
+  background-repeat: repeat;
+  position: absolute;
+
+}
 
 /* SLIDE CSS */
 .slide {

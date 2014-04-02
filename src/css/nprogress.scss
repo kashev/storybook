@@ -27,7 +27,7 @@ $nprogress-color : #c0392b;
 #nprogress .bar {
   background: $nprogress-color;
 
-  position: fixed;
+  position: absolute;
   z-index: 100;
   top: 0;
   left: 0;
@@ -56,7 +56,7 @@ $nprogress-color : #c0392b;
 /* Remove these to get rid of the spinner */
 #nprogress .spinner {
   display: block;
-  position: fixed;
+  position: absolute;
   z-index: 100;
   top: 15px;
   right: 15px;
