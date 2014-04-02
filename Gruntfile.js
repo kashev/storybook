@@ -66,7 +66,8 @@ module.exports = function(grunt) {
      */
     jshint: {
       src: ['Gruntfile.js', 
-            'src/js/main.js'],
+            'src/js/main.js',
+            'src/js/slider_init.js'],
       options: {
         curly : true,
         eqeqeq : true,
@@ -81,6 +82,7 @@ module.exports = function(grunt) {
         browser : true,
         globals : {
           $ : true,
+          jQuery : true,
           require : true,
           define : true,
           requirejs : true,

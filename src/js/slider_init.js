@@ -13,8 +13,9 @@
 
 /*
  * STARTED FROM http://cferdinandi.github.io/slider/
- * Modified to include hash navigation.
+ * Modified to include hash navigation, etc.
  */
+/* global Swipe:false */
 /*
  * Add actual invisibility to jQuery
  *   http://stackoverflow.com/a/9614662/1473320
@@ -29,7 +30,7 @@ jQuery.fn.invisible = function() {
 
 jQuery.fn.visibilityToggle = function() {
     return this.css('visibility', function(i, visibility) {
-        return (visibility == 'visible') ? 'hidden' : 'visible';
+        return (visibility === 'visible') ? 'hidden' : 'visible';
     });
 };
 
@@ -107,7 +108,7 @@ window.sliderInit = (function (window, document, undefined) {
         $('#slides-nav-menu').toggle({
           duration : 400
         });
-      }
+      };
       // handle show and hide of next/prev
       var handleArrowVisibility = function() {
         var i = mySwipe[index].getPos() - 1;
@@ -126,7 +127,7 @@ window.sliderInit = (function (window, document, undefined) {
           $('#slide-nav-next').visible();
           $('#slide-nav-prev').visible();
         }
-      }
+      };
 
       // Handle next button
       var handleNextBtn = function (event) {
@@ -146,10 +147,10 @@ window.sliderInit = (function (window, document, undefined) {
 
       // Handle keypress
       var handleKeypress = function (event) {
-        if ( event.keyCode == 37 ) {
+        if ( event.keyCode === 37 ) {
           mySwipe[index].prev();
         }
-        if ( event.keyCode == 39 ) {
+        if ( event.keyCode === 39 ) {
           mySwipe[index].next();
         }
         handleArrowVisibility();
@@ -160,13 +161,13 @@ window.sliderInit = (function (window, document, undefined) {
         event.preventDefault();
         stopVideo();
         toggleToC();
-      }
+      };
 
 
       // EVENTS, LISTENERS, AND INITS
 
       // Activate Slider
-      mySwipe[index] = Swipe(slider, {
+      mySwipe[index] = new Swipe(slider, {
         // speed: 400,
         continuous: false,
         disableScroll: true,
