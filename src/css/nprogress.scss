@@ -1,12 +1,31 @@
+/*
+ * storybook
+ * 'A Storybook Webapp, Optimized for iPad'
+ * 
+ * Kashev Dalmia
+ * kashev.dalmia@gmail.com
+ * 
+ * Yet Another Project for ARTD 313 @ UIUC, Sp 2014
+ * proj1a3b - dalmia3
+ * 
+ * nprogress.css
+ */
+
+/*
+ * Only slightly modified to Sass and others from http://ricostacruz.com/nprogress/
+ */
+
+
+$nprogress-color : #c0392b;
+
 /* Make clicks pass-through */
 #nprogress {
   pointer-events: none;
   -webkit-pointer-events: none;
-  z-index: 100;
 }
 
 #nprogress .bar {
-  background: #29d;
+  background: $nprogress-color;
 
   position: fixed;
   z-index: 100;
@@ -24,7 +43,7 @@
   right: 0px;
   width: 100px;
   height: 100%;
-  box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+  box-shadow: 0 0 10px #29d, 0 0 5px $nprogress-color;
   opacity: 1.0;
 
   -webkit-transform: rotate(3deg) translate(0px, -4px);
@@ -48,8 +67,8 @@
   height: 14px;
 
   border:  solid 2px transparent;
-  border-top-color:  #29d;
-  border-left-color: #29d;
+  border-top-color:  $nprogress-color;
+  border-left-color: $nprogress-color;
   border-radius: 10px;
 
   -webkit-animation: nprogress-spinner 400ms linear infinite;

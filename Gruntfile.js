@@ -20,7 +20,7 @@ module.exports = function(grunt) {
     'dist/css/main.css'       : 'src/css/main.scss',
     'dist/css/reset.css'      : 'src/css/reset.css',
     'dist/css/slider-css.css' : 'src/css/slider-css.css',
-    'dist/css/nprogress.css'  : 'src/css/nprogress.css'
+    'dist/css/nprogress.css'  : 'src/css/nprogress.scss'
   };
   var js_files   = {
     'dist/js/main.js'              : 'src/js/main.js',
@@ -180,7 +180,7 @@ module.exports = function(grunt) {
         tasks : ['jshint', 'copy:dev'],
       },
       css : {
-        files : ['src/css/main.scss'],
+        files : ['src/css/main.scss','src/css/nprogress.scss'],
         tasks : ['sass:dev'],
       },
       grunt : {
