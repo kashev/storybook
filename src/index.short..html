@@ -1,0 +1,190 @@
+<!--
+/*
+ * storybook
+ * 'A Storybook Webapp, Optimized for iPad'
+ * 
+ * Kashev Dalmia
+ * kashev.dalmia@gmail.com
+ * 
+ * Yet Another Project for ARTD 313 @ UIUC, Sp 2014
+ * proj1a3b - dalmia3
+ * 
+ * index.html
+ */
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>goodnight moon</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; user-scalable=no;">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- iPad Mobile Webapp -->
+  <!-- NOTE: precomposed tags are not needed for iOS7+ -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <link rel="apple-touch-icon" sizes="152x152" href="img/icon-152x152.png" />
+
+  <!-- Android Mobile Webapp -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="shortcut icon" sizes="196x196" href="img/icon-196x196.png">
+    
+  <!-- FAVICON -->
+  <link rel="icon" 
+        type="image/ico" 
+        href="img/favicon.ico?v=n">
+
+  <!-- CSS -->
+  <!-- Slider -->
+  <link rel="stylesheet" href="css/slider-css.css">
+  <!-- NProgress -->
+  <link rel="stylesheet" href="css/nprogress.css">
+  <!-- storybook css -->
+  <link rel="stylesheet" href="css/main.css" />
+  <!-- FONT AWESOME -->
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="loading"><br><br><br>loading...</div>
+    <!-- BEGIN SLIDER -->
+    <div id="slider" class="slider" data-slider>
+      <!-- EACH SLIDE IS A PAGE -->
+      <div class="slides">
+        <!-- PAGE 0 - TITLE -->
+        <div class="slide">
+          <img class="bg" id="page-0" src="img/joes.jpg">
+          <!-- <canvas width="1024" height="748"></canvas> -->
+          <div class="pagetext titlepage">
+            <h1>goodnight moon</h1>
+            <h2>an interpretation of the text by Margaret Wise Brown</h2>
+            <h2>
+              <br>
+              <br>
+              <br>
+              by <a href="http://kashevdalmia.com/">Kashev Dalmia</a>
+            </h2>
+          </div>
+        </div>
+        <!-- PAGE 1 -->
+        <div class="slide">
+          <img class="bg" id="page-1" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
+          <!-- <canvas width="1024" height="748"></canvas> -->
+          <div class="pagetext bottom">
+            In the great green room
+          </div>
+          <div class="page-number">1</div>
+        </div>
+        <!-- PAGE 2 -->
+        <div class="slide">
+          <img class="bg" id="page-2" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
+          <!-- <canvas width="1024" height="748"></canvas> -->
+          <div class="pagetext bottom">
+            There was a telephone and a red balloon
+          </div>
+          <div class="page-number">2</div>
+        </div>
+        <!-- PAGE 3 -->
+        <div class="slide">
+          <img class="bg" id="page-3" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
+          <!-- <canvas width="1024" height="748"></canvas> -->
+          <div class="pagetext bottom">
+            And a picture of the cow jumping over the moon.
+          </div>
+          <div class="page-number">3</div>
+        </div>
+        <!-- PAGE 4 -->
+        <div class="slide">
+          <img class="bg" id="page-4" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
+          <!-- <canvas width="1024" height="748"></canvas> -->
+          <div class="pagetext bottom">
+            And there were three little bears sitting on chairs
+          </div>
+          <div class="page-number">4</div>
+        </div>
+        <!-- PAGE 5 -->
+        <div class="slide">
+          <img class="bg" id="page-5" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
+          <!-- <canvas width="1024" height="748"></canvas> -->
+          <div class="pagetext bottom">
+            And two little kittens
+          </div>
+          <div class="page-number">5</div>
+        </div>
+        <!-- PAGE 6 -->
+        <div class="slide">
+          <img class="bg" id="page-6" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
+          <!-- <canvas width="1024" height="748"></canvas> -->
+          <div class="pagetext bottom">
+            And a pair of mittens
+          </div>
+          <div class="page-number">6</div>
+        </div>
+        <!-- PAGE 7 -->
+        <div class="slide">
+          <img class="bg" id="page-7" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
+          <!-- <canvas width="1024" height="748"></canvas> -->
+          <div class="pagetext bottom">
+            And a little toyhouse
+          </div>
+          <div class="page-number">7</div>
+        </div>
+        <!-- PAGE 8 -->
+        <div class="slide">
+          <img class="bg" id="page-8" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
+          <!-- <canvas width="1024" height="748"></canvas> -->
+          <div class="pagetext bottom">
+            And a young mouse
+          </div>
+          <div class="page-number">8</div>
+        </div>
+        <!-- PAGE 9 -->
+        <div class="slide">
+          <img class="bg" id="page-9" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
+          <!-- <canvas width="1024" height="748"></canvas> -->
+          <div class="pagetext bottom">
+            And a comb and a brush and a bowl full of mush
+          </div>
+          <div class="page-number">9</div>
+        </div>
+        <!-- PAGE 10 -->
+        <div class="slide">
+          <img class="bg" id="page-10" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=">
+          <!-- <canvas width="1024" height="748"></canvas> -->
+          <div class="pagetext bottom">
+            And a quiet old lady who was whispering "hush."
+          </div>
+          <div class="page-number">10</div>
+        </div>
+      </div> <!-- END slides -->
+      <div class="slides-nav" data-slider-nav></div>
+    </div> <!-- END slider -->
+    <div class="grid slides-nav-menu" id="slides-nav-menu">
+      <div class="third">title</div>
+      <div class="third">1</div>
+      <div class="third">2</div>
+      <div class="third">3</div>
+      <div class="third">4</div>
+      <div class="third">5</div>
+      <div class="third">6</div>
+      <div class="third">7</div>
+      <div class="third">8</div>
+      <div class="third">9</div>
+      <div class="third">10</div>
+    </div>
+  </div> <!-- END CONTENT-->
+
+  <!-- Scripts -->
+  <!-- jQuery -->
+  <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+  <!-- Slider -->
+  <script src="js/lib/slider.js"></script>
+  <!-- storybook js -->
+  <script src="js/main.js"></script>
+  
+</body>
+</html>
