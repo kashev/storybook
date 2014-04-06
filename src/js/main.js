@@ -42,47 +42,97 @@ $(document).ready(function(){
     // $("body").append("<img id='ipad' src='img/ipad.png'>");
   }
 
+;(function($){
+  var cache = []; var timeout;
+
+  $.fn.remove = function(){
+    return this.each(function(){
+      if(this.parentNode){
+        if(this.tagName === 'IMG'){
+          cache.push(this);
+          this.src = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';
+          if (timeout) {
+            clearTimeout(timeout);
+          }
+          timeout = setTimeout(function(){ cache = []; }, 60000);
+        }
+        this.parentNode.removeChild(this);
+      }
+    });
+  };
+})(jQuery);
+
   /* START PROGRESS BAR */
   NProgress.configure({ ease: 'ease', speed: 25 });
   NProgress.start();
 
   /* PXLOADER */
   var loader = new PxLoader();
-  var imgs = [
-    loader.addImage("img/texture.png"),
-    loader.addImage("img/joes.jpg"),
-    loader.addImage("img/green-room.png"),
-    loader.addImage("img/phone.png"),
-    loader.addImage("img/bears-chairs.png"),
-    loader.addImage("img/kittens.png"),
-    loader.addImage("img/mittens.jpg"),
-    loader.addImage("img/house.jpg"),
-    loader.addImage("img/young-mouse.jpg"),
-    loader.addImage("img/mush.jpg"),
-    loader.addImage("img/old-lady.jpg"),
-    loader.addImage("img/gn-room.png"),
-    loader.addImage("img/gn-moon.jpg"),
-    loader.addImage("img/gn-cow.JPG"),
-    loader.addImage("img/gn-light-redballoon.jpg"),
-    loader.addImage("img/gn-bears.png"),
-    loader.addImage("img/gn-kittens.jpg"),
-    loader.addImage("img/gn-clocks.jpg"),
-    loader.addImage("img/gn-house.jpg"),
-    loader.addImage("img/gn-mouse.jpg"),
-    loader.addImage("img/gn-brush.jpg"),
-    loader.addImage("img/gn-nobody.jpg"),
-    loader.addImage("img/gn-mush.jpg"),
-    loader.addImage("img/gn-oldlady.jpg"),
-    loader.addImage("img/gn-starsair.jpg"),
-    loader.addImage("img/gn-noises.jpg")
-  ];
+  var img_texture             = loader.addImage("img/texture.jpg");
+  var img_joes                = loader.addImage("img/joes.jpg");
+  var img_green_room          = loader.addImage("img/green-room.jpg");
+  var img_phone               = loader.addImage("img/phone.jpg");
+  var img_bears_chairs        = loader.addImage("img/bears-chairs.jpg");
+  var img_kittens             = loader.addImage("img/kittens.jpg");
+  var img_mittens             = loader.addImage("img/mittens.jpg");
+  var img_house               = loader.addImage("img/house.jpg");
+  var img_young_mouse         = loader.addImage("img/young-mouse.jpg");
+  var img_mush                = loader.addImage("img/mush.jpg");
+  var img_old_lady            = loader.addImage("img/old-lady.jpg");
+  var img_gn_room             = loader.addImage("img/gn-room.jpg");
+  var img_gn_moon             = loader.addImage("img/gn-moon.jpg");
+  var img_gn_cow              = loader.addImage("img/gn-cow.JPG");
+  var img_gn_light_redballoon = loader.addImage("img/gn-light-redballoon.jpg");
+  var img_gn_bears            = loader.addImage("img/gn-bears.jpg");
+  var img_gn_kittens          = loader.addImage("img/gn-kittens.jpg");
+  var img_gn_clocks           = loader.addImage("img/gn-clocks.jpg");
+  var img_gn_house            = loader.addImage("img/gn-house.jpg");
+  var img_gn_mouse            = loader.addImage("img/gn-mouse.jpg");
+  var img_gn_brush            = loader.addImage("img/gn-brush.jpg");
+  var img_gn_nobody           = loader.addImage("img/gn-nobody.jpg");
+  var img_gn_mush             = loader.addImage("img/gn-mush.jpg");
+  var img_gn_oldlady          = loader.addImage("img/gn-oldlady.jpg");
+  var img_gn_starsair         = loader.addImage("img/gn-starsair.jpg");
+  var img_gn_noise            = loader.addImage("img/gn-noises.jpg");
 
   loader.addProgressListener(function(e){
-    // console.log(e.completedCount / e.totalCount);
     NProgress.set(e.completedCount / e.totalCount);
   });
 
   loader.addCompletionListener(function() {
+    var ipad_width  = 1024;
+    var ipad_height = 748;
+    document.getElementById("page-0" ).getContext("2d").drawImage(img_bears_chairs, 0, 0, ipad_width, ipad_height);
+    document.getElementById("page-1" ).getContext("2d").drawImage(img_bears_chairs, 0, 0, ipad_width, ipad_height);
+    document.getElementById("page-2" ).getContext("2d").drawImage(img_bears_chairs, 0, 0, ipad_width, ipad_height);
+    document.getElementById("page-3" ).getContext("2d").drawImage(img_bears_chairs, 0, 0, ipad_width, ipad_height);
+    document.getElementById("page-4" ).getContext("2d").drawImage(img_bears_chairs, 0, 0, ipad_width, ipad_height);
+    document.getElementById("page-5" ).getContext("2d").drawImage(img_bears_chairs, 0, 0, ipad_width, ipad_height);
+    document.getElementById("page-6" ).getContext("2d").drawImage(img_bears_chairs, 0, 0, ipad_width, ipad_height);
+    document.getElementById("page-7" ).getContext("2d").drawImage(img_bears_chairs, 0, 0, ipad_width, ipad_height);
+    document.getElementById("page-8" ).getContext("2d").drawImage(img_bears_chairs, 0, 0, ipad_width, ipad_height);
+    document.getElementById("page-9" ).getContext("2d").drawImage(img_bears_chairs, 0, 0, ipad_width, ipad_height);
+    document.getElementById("page-10").getContext("2d").drawImage(img_bears_chairs, 0, 0, ipad_width, ipad_height);
+    document.getElementById("page-11").getContext("2d").drawImage(img_bears_chairs, 0, 0, ipad_width, ipad_height);
+    document.getElementById("page-12").getContext("2d").drawImage(img_bears_chairs, 0, 0, ipad_width, ipad_height);
+    document.getElementById("page-13").getContext("2d").drawImage(img_bears_chairs, 0, 0, ipad_width, ipad_height);
+    document.getElementById("page-14").getContext("2d").drawImage(img_bears_chairs, 0, 0, ipad_width, ipad_height);
+    document.getElementById("page-15").getContext("2d").drawImage(img_bears_chairs, 0, 0, ipad_width, ipad_height);
+    document.getElementById("page-16").getContext("2d").drawImage(img_bears_chairs, 0, 0, ipad_width, ipad_height);
+    document.getElementById("page-17").getContext("2d").drawImage(img_bears_chairs, 0, 0, ipad_width, ipad_height);
+    document.getElementById("page-18").getContext("2d").drawImage(img_bears_chairs, 0, 0, ipad_width, ipad_height);
+    document.getElementById("page-19").getContext("2d").drawImage(img_bears_chairs, 0, 0, ipad_width, ipad_height);
+    document.getElementById("page-20").getContext("2d").drawImage(img_bears_chairs, 0, 0, ipad_width, ipad_height);
+    document.getElementById("page-21").getContext("2d").drawImage(img_bears_chairs, 0, 0, ipad_width, ipad_height);
+    document.getElementById("page-22").getContext("2d").drawImage(img_bears_chairs, 0, 0, ipad_width, ipad_height);
+    document.getElementById("page-23").getContext("2d").drawImage(img_bears_chairs, 0, 0, ipad_width, ipad_height);
+    document.getElementById("page-24").getContext("2d").drawImage(img_bears_chairs, 0, 0, ipad_width, ipad_height);
+    document.getElementById("page-25").getContext("2d").drawImage(img_bears_chairs, 0, 0, ipad_width, ipad_height);
+    document.getElementById("page-26").getContext("2d").drawImage(img_bears_chairs, 0, 0, ipad_width, ipad_height);
+    document.getElementById("page-27").getContext("2d").drawImage(img_bears_chairs, 0, 0, ipad_width, ipad_height);
+
+
+    /* Done */
     NProgress.done();
     $('#loading').toggle();
   });

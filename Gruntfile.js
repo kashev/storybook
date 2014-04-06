@@ -178,7 +178,7 @@ module.exports = function(grunt) {
         tasks : ['copy:dev'],
       },
       js : {
-        files : ['Gruntfile.js', 'src/js/*.js'],
+        files : ['Gruntfile.js', 'src/js/*.js', 'src/js/lib/slider/.js'],
         tasks : ['jshint', 'copy:dev'],
       },
       css : {
