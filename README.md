@@ -17,7 +17,7 @@ This project was designed and built for the Spring 2014 semester of Art & Design
 
 The resultant application is currently live at:
 
-- http://kashevdalmia.com/storybook
+- http://kashevdalmia.com/moon
 
 ## The Book
 The book is an interpretation of the children's story ['Goodnight Moon'](http://en.wikipedia.org/wiki/Goodnight_Moon) by Margaret Wise Brown. 
