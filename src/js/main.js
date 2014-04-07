@@ -85,11 +85,11 @@ $(document).ready(function(){
   var ipad_height = 748;
   var image_urls = [];
   image_urls[0]  = "img/joes.jpg";
-  image_urls[1]  = "img/green-room.png";
-  image_urls[2]  = "img/phone.png";
+  image_urls[1]  = "img/green-room.jpg";
+  image_urls[2]  = "img/phone.jpg";
   image_urls[3]  = "img/joes.jpg";
-  image_urls[4]  = "img/bears-chairs.png";
-  image_urls[5]  = "img/kittens.png";
+  image_urls[4]  = "img/bears-chairs.jpg";
+  image_urls[5]  = "img/kittens.jpg";
   image_urls[6]  = "img/mittens.jpg";
   image_urls[7]  = "img/house.jpg";
   image_urls[8]  = "img/young-mouse.jpg";
@@ -97,7 +97,7 @@ $(document).ready(function(){
   image_urls[10] = "img/old-lady.jpg";
   image_urls[11] = "img/gn-room.png";
   image_urls[12] = "img/gn-moon.jpg";
-  image_urls[13] = "img/gn-cow.JPG";
+  image_urls[13] = "img/gn-cow.jpg";
   image_urls[14] = "img/gn-light-redballoon.jpg";
   image_urls[15] = "img/gn-bears.png";
   image_urls[16] = "img/gn-kittens.jpg";
@@ -111,8 +111,8 @@ $(document).ready(function(){
   image_urls[24] = "img/gn-starsair.jpg";
   image_urls[25] = "img/gn-noises.jpg";
   image_urls[26] = "img/joes.jpg";
-  image_urls[27] = "img/gn-room.png";
-  image_urls[28] = "img/gn-room.png";
+  image_urls[27] = "img/gn-room.jpg";
+  image_urls[28] = "img/gn-room.jpg";
   var tiny_image = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';
   
   var slider = window.sliderInit = (function (window, document, undefined) {

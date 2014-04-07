@@ -31,10 +31,11 @@ if ( 'querySelector' in document && 'addEventListener' in window ) {
 		var browser = {
 			addEventListener: !!window.addEventListener,
 			pointer: window.navigator.pointerEnabled || window.navigator.msPointerEnabled,
-			touch: ('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch,
+			touch: false, //(('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch),
 			transitions: (function(temp) {
 				var props = ['transitionProperty', 'WebkitTransition', 'MozTransition', 'OTransition', 'msTransition'];
-				for ( var i in props ) if (temp.style[ props[i] ] !== undefined) return true;
+				// for ( var i in props ) if (temp.style[ props[i] ] !== undefined) return true;
+				for ( var i in props ) if (temp.style[ props[i] ] !== undefined) return false; // turn off hardware acceleration
 				return false;
 			})(document.createElement('swipe'))
 		};
